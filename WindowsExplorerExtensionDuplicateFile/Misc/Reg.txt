@@ -1,3 +1,6 @@
 ﻿regsvr32 "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
+regsvr32 \U "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
+
+regasm "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
 
 regsvr32 \U "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"

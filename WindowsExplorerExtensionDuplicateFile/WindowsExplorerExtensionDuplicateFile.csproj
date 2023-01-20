@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DuplicateFileExt.cs" />
-    <Compile Include="Properties\AppStrings.Designer.cs">
+    <Compile Include="Resources\AppStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.resx</DependentUpon>
@@ -66,13 +66,16 @@
     <None Include="SignedKey.snk" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\AppStrings.resx">
+    <EmbeddedResource Include="Resources\AppStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CountLines.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Misc\Reg.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

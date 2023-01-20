@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsExplorerExtensionDuplicateFile.Properties {
+namespace WindowsExplorerExtensionDuplicateFile.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WindowsExplorerExtensionDuplicateFile.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsExplorerExtensionDuplicateFile.Properties.AppStrings", typeof(AppStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsExplorerExtensionDuplicateFile.Resources.AppStrings", typeof(AppStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

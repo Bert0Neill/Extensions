@@ -9,7 +9,7 @@ namespace WindowsExplorerExtensionDuplicateFile
 {
     [ComVisible(true)]
     //[COMServerAssocation(AssociationType.ClassOfExtension, ".txt")]
-    [COMServerAssociation(AssociationType.AllFiles)]
+    [COMServerAssociation(AssociationType.ClassOfExtension, ".txt")]
     public class DuplicateFileExt : SharpContextMenu
     {
         /// <summary>
@@ -39,7 +39,7 @@ namespace WindowsExplorerExtensionDuplicateFile
             var itemCountLines = new ToolStripMenuItem
             {
                 Text = "Count Lines...",
-                Image = Properties.AppStrings.CountLines
+                Image = Resources.AppStrings.CountLines
             };
 
             //  When we click, we'll count the lines.
