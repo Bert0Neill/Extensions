@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsExplorerExtensionDuplicateFile.Resources {
+namespace WinExtDuplicateFile.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppStrings {
+    internal class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AppStrings() {
+        internal AppResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsExplorerExtensionDuplicateFile.Resources.AppStrings", typeof(AppStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WinExtDuplicateFile.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Duplicate File.
+        ///   Looks up a localized string similar to Duplicate File....
         /// </summary>
         internal static string ContextMenuCaption {
             get {
@@ -80,39 +80,30 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Explorer was not able to duplicate the file {0}. The following exception occured {1}..
-        /// </summary>
-        internal static string DuplicateFailureMessage {
-            get {
-                return ResourceManager.GetString("DuplicateFailureMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}_copy_{1}{2}.
-        /// </summary>
-        internal static string DuplicateFilePostfix {
-            get {
-                return ResourceManager.GetString("DuplicateFilePostfix", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DuplicateImage {
+        internal static System.Drawing.Bitmap DuplicateFile {
             get {
-                object obj = ResourceManager.GetObject("DuplicateImage", resourceCulture);
+                object obj = ResourceManager.GetObject("DuplicateFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} has been duplicated.
+        ///   Looks up a localized string similar to File {0} failed to get duplicated - Reason - {1}.
         /// </summary>
-        internal static string DuplicateSuccessMessage {
+        internal static string FailureDuplicationMessage {
             get {
-                return ResourceManager.GetString("DuplicateSuccessMessage", resourceCulture);
+                return ResourceManager.GetString("FailureDuplicationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File {0} has been duplicated and called {1}.
+        /// </summary>
+        internal static string SuccessDuplicationMessage {
+            get {
+                return ResourceManager.GetString("SuccessDuplicationMessage", resourceCulture);
             }
         }
     }

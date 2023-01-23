@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -8,8 +10,8 @@ using SharpShell.SharpContextMenu;
 namespace WindowsExplorerExtensionDuplicateFile
 {
     [ComVisible(true)]
-    //[COMServerAssocation(AssociationType.ClassOfExtension, ".txt")]
-    [COMServerAssociation(AssociationType.ClassOfExtension, ".txt")]
+    [COMServerAssociation(AssociationType.AllFiles)]
+    //[COMServerAssociation(AssociationType.ClassOfExtension, ".txt")]
     public class DuplicateFileExt : SharpContextMenu
     {
         /// <summary>
@@ -32,43 +34,83 @@ namespace WindowsExplorerExtensionDuplicateFile
         /// </returns>
         protected override ContextMenuStrip CreateMenu()
         {
+            try { 
             //  Create the menu strip.
             var menu = new ContextMenuStrip();
 
             //  Create a 'count lines' item.
             var itemCountLines = new ToolStripMenuItem
             {
-                Text = "Count Lines...",
-                Image = Resources.AppStrings.CountLines
+                Text = Resources.AppStrings.ContextMenuCaption,
+                Image = Resources.AppStrings.DuplicateImage
+                //ShortcutKeys = Keys.D
             };
 
             //  When we click, we'll count the lines.
-            itemCountLines.Click += (sender, args) => CountLines();
+            itemCountLines.Click += (sender, args) => DuplicateFiles();
 
             //  Add the item to the context menu.
             menu.Items.Add(itemCountLines);
 
             //  Return the menu.
             return menu;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + Environment.NewLine + ex.StackTrace);
+                return null;
+            }
         }
 
         /// <summary>
         /// Counts the lines in the selected files.
         /// </summary>
-        private void CountLines()
+        private void DuplicateFiles()
         {
-            //  Builder for the output.
-            var builder = new StringBuilder();
+            string existingFullFilename = string.Empty;
 
-            //  Go through each file.
-            foreach (var filePath in SelectedItemPaths)
+            try
             {
-                //  Count the lines.
-                builder.AppendLine(string.Format("{0} - {1} Lines", Path.GetFileName(filePath), File.ReadAllLines(filePath).Length));
-            }
 
-            //  Show the ouput.
-            MessageBox.Show(builder.ToString());
+                //  Go through each file.
+                foreach (var filePath in SelectedItemPaths)
+                {
+                    string existingFilenameNoExtension, existingFilenameExtension = string.Empty;
+                    int copyCounter = 1;
+                    bool isValidFilename = false;
+                    string duplicatedFilename = Resources.AppStrings.DuplicateFilePostfix; // {0} Copy{1}{2}
+                    string newFilename = string.Empty;
+
+                    if (File.Exists(filePath))
+                    {
+                        existingFullFilename = Path.GetFileName(filePath);
+                        existingFilenameNoExtension = Path.GetFileNameWithoutExtension(filePath);
+                        existingFilenameExtension = Path.GetExtension(filePath);                                                
+
+                        while (!isValidFilename)
+                        {
+                            newFilename = string.Format(duplicatedFilename, existingFilenameNoExtension, copyCounter, existingFilenameExtension);
+
+                            if (File.Exists(Path.GetDirectoryName(filePath) + "\\" + newFilename))
+                            {
+                                copyCounter++; // keep going until system finds a unique filename
+                            }
+                            else isValidFilename = true; // exit loop
+                        }
+
+                        string saveFileAs = Path.GetDirectoryName(filePath) + "\\" + newFilename;
+
+                        File.Copy(filePath, saveFileAs);
+                    }
+                }
+
+                //  Show the ouput.
+                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateSuccessMessage, existingFullFilename));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateFailureMessage, existingFullFilename, ex.Message)); //Explorer was not able to duplicate the file {0}. The following exception occured {1}.
+            }
         }
     }
 }

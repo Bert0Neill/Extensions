@@ -1,6 +1,27 @@
-﻿regsvr32 "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
-regsvr32 \U "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
+﻿
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
 
-regasm "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
+// duplicate
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe" "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\release\WindowsExplorerExtensionDuplicateFile.dll"
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe" "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\release\WindowsExplorerExtensionDuplicateFile.dll" /codebase
 
-regsvr32 \U "C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release\WindowsExplorerExtensionDuplicateFile.dll"
+C:\Workspace\Repo\Extensions\WindowsExplorerExtensionDuplicateFile\bin\Release
+
+gacutil /i WindowsExplorerExtensionDuplicateFile.dll
+RegAsm.exe WindowsExplorerExtensionDuplicateFile.dll /codebase
+
+C:\WINDOWS\system32\C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/WindowsExplorerExtensionDuplicateFile/v4.0_1.0.0.0__dbcd7347d4dfbd2f/WindowsExplorerExtensionDuplicateFile.dll
+
+//CountLinesExtension
+Go to folder
+gacutil /i CountLinesExtension.dll
+RegAsm.exe CountLinesExtension.dll
+
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe" "C:\Users\User\Downloads\SharpShell_Source_Code\SharpShell Source Code\SharpShell\Samples\ContextMenu\CountLinesExtension\bin\Release\CountLinesExtension.dll"
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe" "C:\Users\User\Downloads\SharpShell_Source_Code\SharpShell Source Code\SharpShell\Samples\ContextMenu\CountLinesExtension\bin\release\CountLinesExtension.dll" /codebase
+
+// stop from Admin dos
+taskkill /F /IM explorer.exe
+
+// non admin dos
+start C:\Windows\explorer.exe
