@@ -78,7 +78,7 @@ namespace WindowsExplorerExtensionDuplicateFile
                     string existingFilenameNoExtension, existingFilenameExtension = string.Empty;
                     int copyCounter = 1;
                     bool isValidFilename = false;
-                    string duplicatedFilename = Resources.AppStrings.DuplicateFilePostfix; // {0} Copy{1}{2}
+                    string duplicatedFilename = Resources.AppStrings.DuplicateFilePostfix;
                     string newFilename = string.Empty;
 
                     if (File.Exists(filePath))
@@ -105,11 +105,11 @@ namespace WindowsExplorerExtensionDuplicateFile
                 }
 
                 //  Show the ouput.
-                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateSuccessMessage, existingFullFilename));
+                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateSuccessMessage, existingFullFilename), "Duplicate File", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateFailureMessage, existingFullFilename, ex.Message)); //Explorer was not able to duplicate the file {0}. The following exception occured {1}.
+                MessageBox.Show(String.Format(Resources.AppStrings.DuplicateFailureMessage, existingFullFilename, ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
