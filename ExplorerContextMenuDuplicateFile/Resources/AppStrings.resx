@@ -121,14 +121,29 @@
     <value>Duplicate File</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Duplicate3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>duplicate3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CountLines" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CountLines.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dulicate3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>dulicate3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duplicate1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>duplicate1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duplicate2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>duplicate2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Duplicate4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>duplicate4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DuplicateFailureMessage" xml:space="preserve">
     <value>Explorer was not able to duplicate the file {0}. The following exception occured {1}.</value>
   </data>
   <data name="DuplicateFilePostfix" xml:space="preserve">
     <value>{0}_copy_{1}{2}</value>
+  </data>
+  <data name="DuplicateImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>duplicate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DuplicateSuccessMessage" xml:space="preserve">
     <value>{0} has been duplicated</value>

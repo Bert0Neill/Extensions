@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsExplorerExtensionDuplicateFile.Resources {
+namespace ExplorerContextMenuDuplicateFile.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsExplorerExtensionDuplicateFile.Resources.AppStrings", typeof(AppStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExplorerContextMenuDuplicateFile.Resources.AppStrings", typeof(AppStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -72,9 +72,49 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Duplicate3 {
+        internal static System.Drawing.Bitmap CountLines {
             get {
-                object obj = ResourceManager.GetObject("Duplicate3", resourceCulture);
+                object obj = ResourceManager.GetObject("CountLines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dulicate3 {
+            get {
+                object obj = ResourceManager.GetObject("Dulicate3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duplicate1 {
+            get {
+                object obj = ResourceManager.GetObject("Duplicate1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duplicate2 {
+            get {
+                object obj = ResourceManager.GetObject("Duplicate2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Duplicate4 {
+            get {
+                object obj = ResourceManager.GetObject("Duplicate4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -94,6 +134,16 @@ namespace WindowsExplorerExtensionDuplicateFile.Resources {
         internal static string DuplicateFilePostfix {
             get {
                 return ResourceManager.GetString("DuplicateFilePostfix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DuplicateImage {
+            get {
+                object obj = ResourceManager.GetObject("DuplicateImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

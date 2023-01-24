@@ -106,14 +106,12 @@
     <EmbeddedResource Include="Resources\AppStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CountLines.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Misc\Reg.txt" />
-    <Content Include="Resources\Duplicate.png" />
+    <Content Include="Resources\Duplicate3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
