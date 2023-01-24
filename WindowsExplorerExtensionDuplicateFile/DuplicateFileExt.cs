@@ -1,29 +1,25 @@
-﻿using System;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Windows.Forms;
-using SharpShell.Attributes;
+﻿using SharpShell.Attributes;
 using SharpShell.SharpContextMenu;
+using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace WindowsExplorerExtensionDuplicateFile
 {
     [ComVisible(true)]
     [COMServerAssociation(AssociationType.AllFiles)]
-    //[COMServerAssociation(AssociationType.ClassOfExtension, ".txt")]
     public class DuplicateFileExt : SharpContextMenu
     {
         /// <summary>
-        /// Determines whether this instance can a shell context show menu, given the specified selected file list.
+        /// Determines whether this instance can show a shell context show menu, given the specified selected file list.
         /// </summary>
         /// <returns>
         ///   <c>true</c> if this instance should show a shell context menu for the specified file list; otherwise, <c>false</c>.
         /// </returns>
         protected override bool CanShowMenu()
-        {
-            //  We always show the menu.
-            return true;
+        {           
+            return true;  // replace with your customn logic to show or not show menu item
         }
 
         /// <summary>
@@ -62,7 +58,7 @@ namespace WindowsExplorerExtensionDuplicateFile
         }
 
         /// <summary>
-        /// Counts the lines in the selected files.
+        /// Duplicate each file that has been selected.
         /// </summary>
         private void DuplicateFiles()
         {
@@ -70,8 +66,7 @@ namespace WindowsExplorerExtensionDuplicateFile
 
             try
             {
-
-                //  Go through each file.
+                //  Go through each selected item in explorer.
                 foreach (var filePath in SelectedItemPaths)
                 {
                     string existingFilenameNoExtension, existingFilenameExtension = string.Empty;
@@ -80,6 +75,7 @@ namespace WindowsExplorerExtensionDuplicateFile
                     string duplicatedFilename = Resources.AppStrings.DuplicateFilePostfix;
                     string newFilename = string.Empty;
 
+                    // check that object is a file
                     if (File.Exists(filePath))
                     {
                         existingFullFilename = Path.GetFileName(filePath);
@@ -103,7 +99,7 @@ namespace WindowsExplorerExtensionDuplicateFile
                     }
                 }
 
-                //  Show the ouput.
+                //  Show the ouput (not necessary)
                 MessageBox.Show(String.Format(Resources.AppStrings.DuplicateSuccessMessage, existingFullFilename), "Duplicate File", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
