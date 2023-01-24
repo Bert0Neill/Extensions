@@ -42,8 +42,7 @@ namespace WindowsExplorerExtensionDuplicateFile
             var itemCountLines = new ToolStripMenuItem
             {
                 Text = Resources.AppStrings.ContextMenuCaption,
-                Image = Resources.AppStrings.Duplicate3,
-                ShortcutKeys = Keys.D
+                Image = Resources.AppStrings.Duplicate3                
             };
 
             //  When we click, we'll count the lines.
